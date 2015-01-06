@@ -32,9 +32,22 @@ class CheckTwigFilesTest extends \PHPUnit_Framework_TestCase
     {
         $configPath = __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'config.yml';
         $config = Yaml::parse($configPath);
-        $this->assertInternalType('array',$config['bundle']);
-        $this->assertSame('DemoBundle', $config['bundle']['name']);
-        $this->assertSame('DemoBundle provide content types for news websites', $config['bundle']['description']);
+        $this->assertInternalType('array',$configBundle = $config['bundle']);
+        $this->assertSame('DemoBundle', $configBundle['name']);
+        $this->assertSame('DemoBundle provide content types for news websites', $configBundle['description']);
+        $this->assertSame('e.chau <eric.chau@lp-digital.fr>', $configBundle['author']);
+        $this->assertSame(1, $configBundle['version']);
+        $this->assertTrue($configBundle['enable']);
+        $this->assertFalse($configBundle['config_per_site']);
+    }
+
+    public function testClassContentFileIsWellFormed()
+    {
+        $classContentPath = __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'ClassContent'.DIRECTORY_SEPARATOR.'block_demo.yml';
+        $config = Yaml::parse($classContentPath);
+        $this->assertInternalType('array', $configClassContent = $config['block_demo']);
+        $this->assertInternalType('array', $configClassContent['properties']);
+        $this->assertInternalType('array', $configClassContent['elements']);
     }
 }
 
