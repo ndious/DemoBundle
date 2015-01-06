@@ -22,7 +22,7 @@
         "symfony/yaml": "~2.6.1"
     },
     "autoload": {
-        "psr-0": { "BackBee\\Bundle\\DemoBundle\\": "" }
+        "psr-4": { "BackBee\\Bundle\\DemoBundle\\": "" }
     },
     "minimum-stability": "dev"
 }
