@@ -1,0 +1,7 @@
+bundle:
+    name: DemoBundle
+    description: DemoBundle provide content types for news websites
+    author: e.chau <eric.chau@lp-digital.fr>
+    version: 1
+    enable: true
+    config_per_site: false

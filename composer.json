@@ -1,0 +1,24 @@
+{
+    "name": "backbee/demo-bundle",
+    "description": "BackBee demonstration bundle",
+    "type": "backbee-bundle",
+    "license": "GPL-3.0+",
+    "keywords": ["backbee", "article", "blog"],
+    "homepage": "https://github.com/backbee/demo-bundle",
+    "authors": [
+        {
+            "name": "Eric Chau",
+            "email": "eric.chau@lp-digital.fr"
+        }
+    ],
+    "require": {
+        "backbee/BackBee": "dev-master"
+    },
+    "require-dev": {
+        "symfony/yaml": "~2.6.1"
+    },
+    "autoload": {
+        "psr-0": { "BackBee\\Bundle\\DemoBundle\\": "" }
+    },
+    "minimum-stability": "dev"
+}
