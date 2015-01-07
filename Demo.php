@@ -1,5 +1,5 @@
 <?php
-namespace BackBee\Bundle\DemoBundle;
+namespace BackBuilder\Bundle\DemoBundle;
 
 /*
  * Copyright (c) 2011-2015 Lp digital system
@@ -20,7 +20,7 @@ namespace BackBee\Bundle\DemoBundle;
  * along with BackBee. If not, see <http://www.gnu.org/licenses/>.
  */
 
-use BackBee\Bundle\AbstractBaseBundle;
+use BackBuilder\Bundle\AbstractBaseBundle;
 
 /**
  * @author Eric Chau <e.chau@lp-digital.fr>

@@ -16,13 +16,13 @@
         }
     ],
     "require": {
-        "backbee/BackBee": "dev-master"
+        "backbee/backbee": "0.11.*@dev"
     },
     "require-dev": {
         "symfony/yaml": "~2.6.1"
     },
     "autoload": {
-        "psr-4": { "BackBee\\Bundle\\DemoBundle\\": "" }
+        "psr-4": { "BackBuilder\\Bundle\\DemoBundle\\": "" }
     },
     "minimum-stability": "dev"
 }
