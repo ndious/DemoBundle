@@ -31,7 +31,7 @@ class CheckTwigFilesTest extends \PHPUnit_Framework_TestCase
     public function testConfigFileIsWellFormed()
     {
         $configPath = __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'config.yml';
-        $config = Yaml::parse($configPath);
+        $config = Yaml::parse(file_get_contents($configPath));
         $this->assertInternalType('array',$configBundle = $config['bundle']);
         $this->assertSame('DemoBundle', $configBundle['name']);
         $this->assertSame('DemoBundle provide content types for news websites', $configBundle['description']);
