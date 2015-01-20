@@ -20,12 +20,12 @@ namespace BackBee\Bundle\DemoBundle;
  * along with BackBee. If not, see <http://www.gnu.org/licenses/>.
  */
 
-use BackBee\Bundle\AbstractBaseBundle;
+use BackBee\Bundle\AbstractBundle;
 
 /**
  * @author Eric Chau <e.chau@lp-digital.fr>
  */
-class Demo extends AbstractBaseBundle
+class Demo extends AbstractBundle
 {
     /**
      * {@inheritdoc}
