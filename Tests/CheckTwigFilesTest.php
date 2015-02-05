@@ -43,9 +43,9 @@ class CheckTwigFilesTest extends \PHPUnit_Framework_TestCase
 
     public function testClassContentFileIsWellFormed()
     {
-        $classContentPath = __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'ClassContent'.DIRECTORY_SEPARATOR.'block_demo.yml';
+        $classContentPath = __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'ClassContent'.DIRECTORY_SEPARATOR.'BlockDemo.yml';
         $config = Yaml::parse($classContentPath);
-        $this->assertInternalType('array', $configClassContent = $config['block_demo']);
+        $this->assertInternalType('array', $configClassContent = $config['BlockDemo']);
         $this->assertInternalType('array', $configClassContent['properties']);
         $this->assertInternalType('array', $configClassContent['elements']);
     }

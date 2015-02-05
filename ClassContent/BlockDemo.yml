@@ -1,4 +1,4 @@
-block_demo:
+BlockDemo:
     properties:
         name: Block demo
         description: "Block for demonstration"
