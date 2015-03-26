@@ -16,7 +16,7 @@
         }
     ],
     "require": {
-        "backbee/BackBee": "dev-master"
+        "backbee/backbee": "1.0.*@dev"
     },
     "require-dev": {
         "symfony/yaml": "~2.6.1"
@@ -24,5 +24,10 @@
     "autoload": {
         "psr-4": { "BackBee\\Bundle\\DemoBundle\\": "" }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "stable",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
 }
