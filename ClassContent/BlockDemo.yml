@@ -1,7 +1,7 @@
 BlockDemo:
     properties:
         name: Block demo
-        description: "Block for demonstration"
+        description: "Block for demonstration purposes"
         category: [Demo]
     elements:
         text:
