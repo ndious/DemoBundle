@@ -34,7 +34,7 @@ class CheckTwigFilesTest extends \PHPUnit_Framework_TestCase
         $config = Yaml::parse(file_get_contents($configPath));
         $this->assertInternalType('array',$configBundle = $config['bundle']);
         $this->assertSame('DemoBundle', $configBundle['name']);
-        $this->assertSame('DemoBundle provide content types for news websites', $configBundle['description']);
+        $this->assertSame('Demobundle provides content types for new websites', $configBundle['description']);
         $this->assertSame('e.chau <eric.chau@lp-digital.fr>', $configBundle['author']);
         $this->assertSame(1, $configBundle['version']);
         $this->assertTrue($configBundle['enable']);
