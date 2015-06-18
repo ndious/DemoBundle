@@ -1,0 +1,9 @@
+{% if item %}
+<form {{ this.bundleAdminForm('demo.admin.save', {'id': item.getId()}, 'put')|raw }}>
+{% else %}
+<form {{ this.bundleAdminForm('demo.admin.save')|raw }}>
+{% endif %}
+    <label for="label">Label</label>
+    <input type="text" name="label" id="label" value="{% if item %}{{ item.getValue() }}{% endif %}">
+    <button type="submit">Save</button>
+</form>
