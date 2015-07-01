@@ -16,10 +16,10 @@
         }
     ],
     "require": {
-        "backbee/backbee": "1.0.*@dev"
+        "backbee/backbee": "~1.0"
     },
     "require-dev": {
-        "symfony/yaml": "~2.5"
+        "symfony/yaml": ">=2.5"
     },
     "autoload": {
         "psr-4": { "BackBee\\Bundle\\DemoBundle\\": "" }
