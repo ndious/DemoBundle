@@ -1,0 +1,17 @@
+<a {{ this.bundleAdminLink('demo.admin.new')|raw }}>
+    new item
+</a>
+<ul>
+    {% for item in items %}
+        <li>
+            {% set id = item.getId() %}
+            {{ item.getValue() }}
+            <a {{ this.bundleAdminLink("demo.admin.edit", {'id': id})|raw }}>
+                edit<i class="fa fa-pen"></i>
+            </a>
+            <a {{ this.bundleAdminLink("demo.admin.delete", {'id': id}, 'delete')|raw }}>
+                delete<i class="fa fa-pen"></i>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
