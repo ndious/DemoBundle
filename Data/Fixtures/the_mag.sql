@@ -922,10 +922,9 @@ UNLOCK TABLES;
 -- Table structure for table `user_group`
 --
 
-DROP TABLE IF EXISTS `user_group`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user_group` (
+CREATE TABLE `user_group` IF NO EXISTS (
   `group_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`group_id`,`user_id`),
