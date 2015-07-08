@@ -24,7 +24,6 @@
 namespace BackBee\Bundle\DemoBundle\Controller;
 
 use BackBee\Bundle\AbstractAdminBundleController;
-
 use BackBee\Bundle\DemoBundle\Entity\Item;
 
 /**
@@ -33,20 +32,20 @@ use BackBee\Bundle\DemoBundle\Entity\Item;
 class AdminController extends AbstractAdminBundleController
 {
     /**
-     * Item index
+     * Item index.
      *
      * @return string Index template
      */
     public function indexAction()
     {
         $items = $this->getRepository('BackBee\Bundle\DemoBundle\Entity\Item')
-                      ->findAll();
+            ->findAll();
 
         return $this->render('Admin/Index.twig', ['items' => $items]);
     }
 
     /**
-     * New item form
+     * New item form.
      *
      * @return string form template
      */
@@ -56,21 +55,22 @@ class AdminController extends AbstractAdminBundleController
     }
 
     /**
-     * Edit  item form
+     * Edit  item form.
      *
-     * @param  Int $id item id
-     * @return string  form template
+     * @param Int $id item id
+     *
+     * @return string form template
      */
     public function editAction($id)
     {
         $item = $this->getRepository('BackBee\Bundle\DemoBundle\Entity\Item')
-                      ->find($id);
+            ->find($id);
 
         return $this->render('Admin/Form.twig', ['item' => $item]);
     }
 
     /**
-     * Save item action
+     * Save item action.
      *
      * @return string Index template
      */
@@ -96,10 +96,11 @@ class AdminController extends AbstractAdminBundleController
     }
 
     /**
-     * Delete selected item
+     * Delete selected item.
      *
-     * @param  Int $id item id
-     * @return string  Index template
+     * @param Int $id item id
+     *
+     * @return string Index template
      */
     public function deleteAction($id)
     {

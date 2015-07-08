@@ -13,6 +13,10 @@
         {
             "name": "Mickaël Andrieu",
             "email": "andrieu.travail@gmail.com"
+        },
+        {
+            "name": "Nicolas Dufreche",
+            "email": "nicolas.dufreche@lp-digital.fr"
         }
     ],
     "require": {
