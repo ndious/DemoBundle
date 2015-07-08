@@ -85,8 +85,8 @@ class DemoWebsiteLoader
     public function updateWebsite($configuration)
     {
         if (!is_array($configuration)
-            || !isset($configuration['domain']
-            || !isset($configuration['label']
+            || !isset($configuration['domain'])
+            || !isset($configuration['label'])
            ) {
                 throw new \InvalidArgumentException('array expected with domain and label keyes');
             }
