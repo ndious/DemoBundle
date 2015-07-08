@@ -1,4 +1,4 @@
 services:
     demo.website_loader:
-        class: \BackBee\Bundle\DemoBundle\Data\Fixtures\DemoWebsiteLoader
+        class: BackBee\Bundle\DemoBundle\Data\Fixtures\DemoWebsiteLoader
         arguments: [@doctrine.connection.default]
