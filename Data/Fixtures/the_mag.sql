@@ -886,10 +886,9 @@ UNLOCK TABLES;
 -- Table structure for table `user`
 --
 
-DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `user` (
+CREATE TABLE `user` IF NO EXISTS (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `login` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -914,7 +913,8 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'admins','admins@backbee.com','e9a7cd362c731ef933cfbfce19c44cbf',0,1,'SuperAdmin','SuperAdmin','6b4569d8a6905d8b1ec33dd985b22063cd2a272b','fafb03a21543992b90fcf7d87cd4965e',1,'2015-06-17 14:18:03','2015-06-17 14:18:03'),(2,'tatatatat','cl.bonfils@gmail.com','e9b67abae95a7938045d40389fcf0d69',0,1,'Clement','bonfils','0bc052ee7c5cfeea8a464c300ec97a1b300dc1e1','cd2c34e1db9dcefe98065574c4cd9569',1,'2015-06-23 14:30:05','2015-06-23 14:30:05');
+INSERT INTO `user` VALUES (1,'admins','admins@backbee.com','e9a7cd362c731ef933cfbfce19c44cbf',0,1,'SuperAdmin','SuperAdmin','6b4569d8a6905d8b1ec33dd985b22063cd2a272b','fafb03a21543992b90fcf7d87cd4965e',1,'2015-06-17 14:18:03','2015-06-17 14:18:03'),(2,'tatatatat','cl.bonfils@gmail.com','e9b67abae95a7938045d40389fcf0d69',0,1,'Clement','bonfils','0bc052ee7c5cfeea8a464c300ec97a1b300dc1e1','cd2c34e1db9dcefe98065574c4cd9569',1,'2015-06-23 14:30:05','2015-06-23 14:30:05')
+WHERE NOT EXISTS (SELECT * FROM user);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
