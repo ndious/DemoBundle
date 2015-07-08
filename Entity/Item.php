@@ -18,6 +18,7 @@
  * You should have received a copy of the GNU General Public License
  * along with BackBee. If not, see <http://www.gnu.org/licenses/>.
  */
+
 namespace BackBee\Bundle\DemoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
@@ -58,12 +59,14 @@ class Item
     public function setId($id)
     {
         $this->id = $id;
+
         return $this;
     }
 
     public function setValue($value)
     {
         $this->value = $value;
+
         return $this;
     }
 }

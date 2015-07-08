@@ -1,4 +1,5 @@
 <?php
+
 namespace BackBee\Bundle\DemoBundle\Tests;
 
 /*
@@ -27,12 +28,11 @@ use Symfony\Component\Yaml\Yaml;
  */
 class CheckTwigFilesTest extends \PHPUnit_Framework_TestCase
 {
-
     public function testConfigFileIsWellFormed()
     {
         $configPath = __DIR__.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'config.yml';
         $config = Yaml::parse(file_get_contents($configPath));
-        $this->assertInternalType('array',$configBundle = $config['bundle']);
+        $this->assertInternalType('array', $configBundle = $config['bundle']);
         $this->assertSame('DemoBundle', $configBundle['name']);
         $this->assertSame('Demobundle provides content types for new websites', $configBundle['description']);
         $this->assertSame('e.chau <eric.chau@lp-digital.fr>', $configBundle['author']);
@@ -50,4 +50,3 @@ class CheckTwigFilesTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType('array', $configClassContent['elements']);
     }
 }
-

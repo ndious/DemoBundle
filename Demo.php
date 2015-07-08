@@ -1,4 +1,5 @@
 <?php
+
 namespace BackBee\Bundle\DemoBundle;
 
 /*
@@ -32,7 +33,6 @@ class Demo extends AbstractBundle
      */
     public function start()
     {
-
     }
 
     /**
@@ -40,6 +40,5 @@ class Demo extends AbstractBundle
      */
     public function stop()
     {
-
     }
 }
