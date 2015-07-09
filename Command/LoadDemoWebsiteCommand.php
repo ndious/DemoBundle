@@ -128,9 +128,11 @@ EOF
     {
         $sites = $this->application->getConfig()->getSection('sites');
 
+        $site = array_pop($sites);
+
         $configuration = [
-            'domain' => $sites['blogbee']['domain'],
-            'label' => 'backbee',
+            'domain' => $site['domain'],
+            'label' => $site['label'],
         ];
 
         return $this->fixtureLoader->updateWebsite($configuration);
