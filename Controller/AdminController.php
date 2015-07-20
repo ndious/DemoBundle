@@ -78,7 +78,7 @@ class AdminController extends AbstractAdminBundleController
     {
         $itemRepo = $this->getRepository('BackBee\Bundle\DemoBundle\Entity\Item');
 
-        if ($this->getRequest()->getMethod() === 'post') {
+        if (strtolower($this->getRequest()->getMethod()) === 'post') {
             $item = new Item();
         } else {
             $item = $itemRepo->find($id);
