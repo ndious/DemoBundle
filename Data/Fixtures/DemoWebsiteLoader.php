@@ -69,9 +69,12 @@ class DemoWebsiteLoader
         $sql = file_get_contents($filePath);
 
         try {
+            $this->connection->beginTransaction();
             $stmt = $this->connection->prepare($sql);
             $stmt->execute();
+            $this->connection->commit();
         } catch (\PDOException $e) {
+            $this->connection->rollback();
             throw new \RuntimeException($e->getMessage(), (int) $e->getCode(), $e);
         }
     }
@@ -94,8 +97,11 @@ class DemoWebsiteLoader
         $label  = $configuration['label'];
 
         try {
+            $this->connection->beginTransaction();
             $stmt = $this->connection->executeUpdate('UPDATE site SET server_name = ? , label = ?', array($domain, $label));
+            $this->connection->commit();
         } catch (\PDOException $e) {
+            $this->connection->rollback();
             throw new \RuntimeException($e->getMessage(), (int) $e->getCode(), $e);
         }
 
