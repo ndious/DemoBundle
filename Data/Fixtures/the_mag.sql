@@ -18,7 +18,7 @@
 --
 -- Table structure for table `acl_classes`
 --
-
+SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `acl_classes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
@@ -970,5 +970,5 @@ UNLOCK TABLES;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-
+SET FOREIGN_KEY_CHECKS = 1;
 -- Dump completed on 2015-07-07 16:58:21
